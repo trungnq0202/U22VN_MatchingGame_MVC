@@ -1,0 +1,9 @@
+.root{
+     -fx-background-image: url("../images/background_ver2.jpg");
+     -fx-background-size: cover;
+ }
+
+.logo{
+    -fx-background-color: transparent;
+
+}

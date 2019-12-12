@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="165.0" maxHeight="1000.0" maxWidth="1400.0" minHeight="1000.0" minWidth="1400.0" prefHeight="1000.0" prefWidth="1400.0" stylesheets="/resources/css/main.css" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="300.0" nodeOrientation="INHERIT" pickOnBounds="true" styleClass="logo" GridPane.halignment="CENTER">
+            <image>
+                <Image url="@../images/cac.png" />
+            </image>
+        </ImageView>
+        <fx:include source="cards.fxml"/>
+        <Pane prefHeight="200.0" prefWidth="322.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <fx:include source="countdowntimer.fxml"/>
+    </children>
+</GridPane>
