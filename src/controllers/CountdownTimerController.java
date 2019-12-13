@@ -7,10 +7,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 import models.CountDownTimer;
 import models.Sound;
+
+import java.util.ArrayList;
 
 public class CountdownTimerController {
     @FXML private ProgressBar countdownProgressBar;
@@ -52,7 +55,7 @@ public class CountdownTimerController {
     }
 
     @FXML private void timerStartPause(MouseEvent mouseEvent) {
-        if (mainController.getEnableSound()) sound.makeBtnSound();
+        if (mainController.getEnableSound()) sound.makeSound();
         if (!timer.isTimerRunning()){
             timer.setTimerRunning(true);
             timeline.play();
@@ -66,7 +69,7 @@ public class CountdownTimerController {
 
 
     @FXML private void timerReset(MouseEvent mouseEvent) {
-        if (mainController.getEnableSound()) sound.makeBtnSound();
+        if (mainController.getEnableSound()) sound.makeSound();
         timeline.stop();
         timer.setTimerRunning(false);
         timer.setMinutes(2); timer.setSeconds(0); timer.setHundthsecs(0);

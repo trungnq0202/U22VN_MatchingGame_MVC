@@ -16,15 +16,14 @@
         <RowConstraints />
     </rowConstraints>
     <children>
-        <ImageView fitHeight="150.0" fitWidth="528.0" nodeOrientation="INHERIT" pickOnBounds="true" styleClass="logo" GridPane.halignment="CENTER">
+        <ImageView fitHeight="164.0" fitWidth="394.0" nodeOrientation="INHERIT" pickOnBounds="true" styleClass="logo" GridPane.halignment="CENTER">
             <image>
                 <Image url="@../images/logo.png" />
             </image>
         </ImageView>
-        <fx:include fx:id="playerscards" source="playercards.fxml" />
+        <fx:include fx:id="playerCardList" source="playercardlist.fxml" />
         <Pane prefHeight="200.0" prefWidth="322.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         <fx:include fx:id="countdownTimer" source="countdowntimer.fxml" />
-      <Button fx:id="musicBtn" mnemonicParsing="false" onMouseClicked="#musicBtnHandle" prefHeight="25.0" prefWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <ImageView fx:id="soundImage" fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="soundBtn" mnemonicParsing="false" onMouseClicked="#musicBtnHandle" prefHeight="34.0" prefWidth="30.0" style="-fx-border-width: 2px; -fx-border-color: yellow; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
     </children>
 </GridPane>

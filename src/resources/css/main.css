@@ -7,6 +7,14 @@
     -fx-background-color : black;
 }
 
+.playerCard{
+    -fx-border-color: rgb(193,28,3);
+    -fx-border-width: 5px;
+    -fx-border-radius: 6px;
+    -fx-background-color: gray;
+    -fx-background-radius: 7px;
+}
+
 .progress-bar > .bar {
     -fx-background-color: linear-gradient(
             from 0px .75em to .75em 0px,
@@ -17,3 +25,4 @@
             derive(-fx-accent, 30%) 99%
     );
 }
+
