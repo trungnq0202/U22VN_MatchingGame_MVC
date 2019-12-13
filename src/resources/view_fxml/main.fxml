@@ -24,6 +24,7 @@
         <fx:include fx:id="playerscards" source="playercards.fxml" />
         <Pane prefHeight="200.0" prefWidth="322.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         <fx:include fx:id="countdownTimer" source="countdowntimer.fxml" />
-      <Button fx:id="musicBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="2" onMouseClicked="#musicBtnHandle" />
+      <Button fx:id="musicBtn" mnemonicParsing="false" onMouseClicked="#musicBtnHandle" prefHeight="25.0" prefWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <ImageView fx:id="soundImage" fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
     </children>
 </GridPane>
