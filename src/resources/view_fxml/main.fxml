@@ -18,12 +18,12 @@
     <children>
         <ImageView fitHeight="150.0" fitWidth="528.0" nodeOrientation="INHERIT" pickOnBounds="true" styleClass="logo" GridPane.halignment="CENTER">
             <image>
-                <Image url="@../images/cac.png" />
+                <Image url="@../images/logo.png" />
             </image>
         </ImageView>
-        <fx:include source="playercards.fxml" />
+        <fx:include fx:id="playerscards" source="playercards.fxml" />
         <Pane prefHeight="200.0" prefWidth="322.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <fx:include source="countdowntimer.fxml" />
+        <fx:include fx:id="countdownTimer" source="countdowntimer.fxml" />
       <Button fx:id="musicBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" GridPane.columnIndex="1" GridPane.rowIndex="2" onMouseClicked="#musicBtnHandle" />
     </children>
 </GridPane>

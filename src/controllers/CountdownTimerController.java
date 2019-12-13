@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 import models.CountDownTimer;
 import models.Sound;
@@ -18,10 +19,13 @@ public class CountdownTimerController {
     @FXML private Label minutesLabel;      //Label displaying minutes
     @FXML private Label secondsLabel;      //Label displaying seconds
     @FXML private Label hundthsecsLabel;   //Label displaying hundredth of a second
+    @FXML private MainController mainController;
 
     private Sound sound;
     private Timeline timeline;
     private CountDownTimer timer;
+
+    public void injectMainController(MainController mainController){this.mainController = mainController;}
 
     public CountdownTimerController(){
         timer = new CountDownTimer();
@@ -48,7 +52,7 @@ public class CountdownTimerController {
     }
 
     @FXML private void timerStartPause(MouseEvent mouseEvent) {
-        sound.makeBtnSound();
+        if (mainController.getEnableSound()) sound.makeBtnSound();
         if (!timer.isTimerRunning()){
             timer.setTimerRunning(true);
             timeline.play();
@@ -62,7 +66,7 @@ public class CountdownTimerController {
 
 
     @FXML private void timerReset(MouseEvent mouseEvent) {
-        sound.makeBtnSound();
+        if (mainController.getEnableSound()) sound.makeBtnSound();
         timeline.stop();
         timer.setTimerRunning(false);
         timer.setMinutes(2); timer.setSeconds(0); timer.setHundthsecs(0);
