@@ -2,14 +2,10 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<GridPane gridLinesVisible="true" hgap="15.0" maxHeight="500.0" maxWidth="800.0" minHeight="700.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: black;" vgap="11.0" GridPane.rowIndex="1"
-          xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="controllers.CountdownTimerController" fx:id="cards">
+<GridPane fx:id="cards" gridLinesVisible="true" hgap="15.0" maxHeight="500.0" maxWidth="800.0" minHeight="700.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: black; -fx-border-radius: 5px; -fx-border-color: rgb(0,255,255); -fx-border-width: 5px;" styleClass="cardsView" vgap="11.0" GridPane.rowIndex="1" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CountdownTimerController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
