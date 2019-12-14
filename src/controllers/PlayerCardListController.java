@@ -20,10 +20,14 @@ public class PlayerCardListController {
     private ArrayList<Integer> cardRow;
     private ArrayList<Integer> cardCol;
     private PlayerCardList playerCardList;
+    private int cardFlippedCount;
+    private PlayerCard prevCardFlipped;
 
     public void injectMainController(MainController mainController){this.mainController = mainController;}
 
     public PlayerCardListController(){
+        cardFlippedCount = 0;
+        prevCardFlipped = null;
 
         flipSound = new Sound("CARD_FLIPPING_SOUND");
 
@@ -54,11 +58,18 @@ public class PlayerCardListController {
         }
     }
 
-
     private void setMouseEventHandler(PlayerCard playerCard){
         playerCard.setOnMouseClicked((MouseEvent e)->{
-            if (mainController.getEnableSound()) flipSound.makeSound();
-            playerCard.flipPlayerCard();
+            if (cardFlippedCount == 0) {
+                if (mainController.getEnableSound()) flipSound.makeSound();
+                prevCardFlipped = playerCard;
+                playerCard.flipPlayerCard();
+                cardFlippedCount++;
+
+            } else if (cardFlippedCount == 1){
+                if (mainController.getEnableSound()) flipSound.makeSound();
+                
+            }
         });
     }
 }

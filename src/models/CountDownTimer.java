@@ -6,10 +6,10 @@ public class CountDownTimer {
     private int hundthsecs ;
     private boolean isTimerRunning;
 
-    public CountDownTimer(){
-        minutes = 2;
-        seconds = 0;
-        hundthsecs = 0;
+    public CountDownTimer(int minutes, int seconds, int hundthsecs){
+        this.minutes = minutes;
+        this.seconds = seconds;
+        this.hundthsecs = hundthsecs;
         isTimerRunning = false;
     }
 

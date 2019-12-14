@@ -28,6 +28,8 @@ public class MainController {
         bgSoundOnImg = new Background(new BackgroundImage(soundOnImg, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(soundBtn.getWidth(), soundBtn.getHeight(), true, true, true, false)));
         bgSoundOffImg = new Background(new BackgroundImage(soundOffImg, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(soundBtn.getWidth(), soundBtn.getHeight(), true, true, true, false)));
         soundBtn.setBackground(bgSoundOnImg);
+
+
     }
 
     public MainController(){

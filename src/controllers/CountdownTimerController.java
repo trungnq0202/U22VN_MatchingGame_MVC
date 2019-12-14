@@ -31,7 +31,7 @@ public class CountdownTimerController {
     public void injectMainController(MainController mainController){this.mainController = mainController;}
 
     public CountdownTimerController(){
-        timer = new CountDownTimer();
+        timer = new CountDownTimer(2,0,0);
         sound = new Sound("BUTTON_SOUND");
         timeline = new Timeline(new KeyFrame(Duration.millis(16), e -> updateTimer()));
         timeline.setCycleCount(Timeline.INDEFINITE);
@@ -66,7 +66,6 @@ public class CountdownTimerController {
             btnStartPauseTimer.setText("Start");
         }
     }
-
 
     @FXML private void timerReset(MouseEvent mouseEvent) {
         if (mainController.getEnableSound()) sound.makeSound();
