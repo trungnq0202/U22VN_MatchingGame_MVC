@@ -10,7 +10,7 @@ import java.net.URL;
 public class Sound {
     private final String BUTTON_SOUND = "BUTTON_SOUND";
     private final String BACKGROUND_MUSIC = "BACKGROUND_MUSIC";
-    private final String CARDS_FLIPPING_SOUND = "CARD_FLIPPING_SOUND";
+    private final String CARD_FLIPPING_SOUND = "CARD_FLIPPING_SOUND";
 
     private Clip sound;
     private MediaPlayer backgroundMusic ;

@@ -3,8 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="165.0" maxHeight="1000.0" maxWidth="1400.0" minHeight="1000.0" minWidth="1400.0" prefHeight="1000.0" prefWidth="1400.0" stylesheets="/resources/css/main.css" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+<GridPane fx:id="mainView" alignment="center" hgap="165.0" maxHeight="950.0" maxWidth="1400.0" minHeight="982.0" minWidth="1400.0" prefHeight="950.0" prefWidth="1400.0" stylesheets="/resources/css/main.css" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
     <columnConstraints>
         <ColumnConstraints />
         <ColumnConstraints />
@@ -16,7 +17,7 @@
         <RowConstraints />
     </rowConstraints>
     <children>
-        <ImageView fitHeight="164.0" fitWidth="394.0" nodeOrientation="INHERIT" pickOnBounds="true" styleClass="logo" GridPane.halignment="CENTER">
+        <ImageView fitHeight="171.0" fitWidth="394.0" nodeOrientation="INHERIT" pickOnBounds="true" styleClass="logo" GridPane.halignment="CENTER">
             <image>
                 <Image url="@../images/logo.png" />
             </image>
@@ -25,5 +26,37 @@
         <Pane prefHeight="200.0" prefWidth="322.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         <fx:include fx:id="countdownTimer" source="countdowntimer.fxml" />
       <Button fx:id="soundBtn" mnemonicParsing="false" onMouseClicked="#musicBtnHandle" prefHeight="34.0" prefWidth="30.0" style="-fx-border-width: 2px; -fx-border-color: yellow; -fx-border-radius: 5px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <VBox prefHeight="200.0" prefWidth="322.0" GridPane.columnIndex="1">
+          <children>
+              <HBox maxWidth="200.0" prefHeight="50.0" prefWidth="50.0" spacing="20">
+                  <children>
+                      <ImageView fitHeight="70.0" fitWidth="100.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                          <image>
+                              <Image url="@../images/level.png" />
+                          </image>
+                      </ImageView>
+                      <Label fx:id="gameLevel" contentDisplay="CENTER" prefHeight="70.0" prefWidth="100.0" text="1" textFill="RED">
+                          <font>
+                              <Font size="25.0" />
+                          </font>
+                      </Label>
+                  </children>
+              </HBox>
+              <HBox maxWidth="200.0" prefHeight="50.0" prefWidth="50.0" spacing="20">
+                <children>
+                    <ImageView fitHeight="70.0" fitWidth="100.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                        <image>
+                            <Image url="@../images/score.png" />
+                        </image>
+                    </ImageView>
+                    <Label fx:id="gameScore" contentDisplay="CENTER" prefHeight="70.0" prefWidth="100.0" text="0" textFill="RED">
+                        <font>
+                            <Font size="25.0" />
+                        </font>
+                    </Label>
+                </children>
+              </HBox>
+          </children>
+      </VBox>
     </children>
 </GridPane>

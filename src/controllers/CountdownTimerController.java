@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class CountdownTimerController {
     @FXML private ProgressBar countdownProgressBar;
-    @FXML private Button btnStartPauseTimer;
-    @FXML private Button btnResetTimer;
+    @FXML private Button btnStartPause;
+    @FXML private Button btnNewGame;
     @FXML private Label minutesLabel;      //Label displaying minutes
     @FXML private Label secondsLabel;      //Label displaying seconds
     @FXML private Label hundthsecsLabel;   //Label displaying hundredth of a second
@@ -31,6 +31,7 @@ public class CountdownTimerController {
     public void injectMainController(MainController mainController){this.mainController = mainController;}
 
     public CountdownTimerController(){
+        System.out.println("Countdowntimercontroller.constructor");
         timer = new CountDownTimer(2,0,0);
         sound = new Sound("BUTTON_SOUND");
         timeline = new Timeline(new KeyFrame(Duration.millis(16), e -> updateTimer()));
@@ -59,11 +60,11 @@ public class CountdownTimerController {
         if (!timer.isTimerRunning()){
             timer.setTimerRunning(true);
             timeline.play();
-            btnStartPauseTimer.setText("Pause");
+            btnStartPause.setText("Pause");
         } else {
             timer.setTimerRunning(false);
             timeline.pause();
-            btnStartPauseTimer.setText("Start");
+            btnStartPause.setText("Start");
         }
     }
 
@@ -72,7 +73,7 @@ public class CountdownTimerController {
         timeline.stop();
         timer.setTimerRunning(false);
         timer.setMinutes(2); timer.setSeconds(0); timer.setHundthsecs(0);
-        btnStartPauseTimer.setText("Start");
+        btnStartPause.setText("Start");
         setTimerLabelAndProgressBar();
     }
 
